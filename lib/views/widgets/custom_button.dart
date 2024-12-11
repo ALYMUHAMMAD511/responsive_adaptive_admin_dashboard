@@ -26,10 +26,13 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
         ),
-        child: Text(
-          text,
-          style: Styles.styleSemiBold18(context).copyWith(
-            color: textColor ?? Colors.white,
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            text,
+            style: Styles.styleSemiBold18(context).copyWith(
+              color: textColor ?? Colors.white,
+            ),
           ),
         ),
       ),

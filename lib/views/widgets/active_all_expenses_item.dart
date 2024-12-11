@@ -16,8 +16,8 @@ class ActiveAllExpensesItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(
-        horizontal: 20,
-        vertical: 16,
+        horizontal: 10,
+        vertical: 12,
       ),
       decoration: ShapeDecoration(
         color: const Color(0xFF4EB7F2),

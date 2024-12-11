@@ -9,17 +9,25 @@ class DashboardMobileLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SingleChildScrollView(
-      child: Column(
-        children: [
-          AllExpensesAndQuickInvoiceSection(),
-          SizedBox(height: 24),
-          MyCardAndTransactionHistorySection(),
-          SizedBox(height: 24),
-          Income(),
-          SizedBox(
-            height: 32,
-          ),
-        ],
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: 16,
+        ),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 16,
+            ),
+            AllExpensesAndQuickInvoiceSection(),
+            SizedBox(height: 24),
+            MyCardAndTransactionHistorySection(),
+            SizedBox(height: 24),
+            Income(),
+            SizedBox(
+              height: 16,
+            ),
+          ],
+        ),
       ),
     );
   }
