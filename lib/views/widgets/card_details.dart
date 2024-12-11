@@ -20,15 +20,23 @@ class CardDetails extends StatelessWidget {
           ),
           child: ListTile(
             contentPadding: EdgeInsets.zero,
-            title: Text(
-              'Name Card',
-              style: Styles.styleRegular16(context).copyWith(
-                color: Colors.white,
+            title: FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name Card',
+                style: Styles.styleRegular16(context).copyWith(
+                  color: Colors.white,
+                ),
               ),
             ),
-            subtitle: Text(
-              'Syah Bandi',
-              style: Styles.styleMedium20(context),
+            subtitle: FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Syah Bandi',
+                style: Styles.styleMedium20(context),
+              ),
             ),
             trailing: SvgPicture.asset(Assets.imagesCardGallery),
           ),
@@ -43,19 +51,27 @@ class CardDetails extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Text(
-                '0918 8124 0042 8129',
-                style: Styles.styleSemiBold24(context).copyWith(
-                  color: Colors.white,
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  '0918 8124 0042 8129',
+                  style: Styles.styleSemiBold24(context).copyWith(
+                    color: Colors.white,
+                  ),
                 ),
               ),
               const SizedBox(
                 height: 12,
               ),
-              Text(
-                '12/20 - 124',
-                style: Styles.styleRegular16(context).copyWith(
-                  color: Colors.white,
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  '12/20 - 124',
+                  style: Styles.styleRegular16(context).copyWith(
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ],

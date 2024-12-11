@@ -20,22 +20,34 @@ class TransactionItem extends StatelessWidget {
       ),
       child: ListTile(
         contentPadding: const EdgeInsets.all(16),
-        title: Text(
-          transactionModel.title,
-          style: Styles.styleSemiBold16(context),
-        ),
-        subtitle: Text(
-          transactionModel.date,
-          style: Styles.styleRegular16(context).copyWith(
-            color: const Color(0xFFAAAAAA),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(
+            transactionModel.title,
+            style: Styles.styleSemiBold16(context),
           ),
         ),
-        trailing: Text(
-          transactionModel.amount,
-          style: Styles.styleSemiBold20(context).copyWith(
-            color: transactionModel.isWithdrawal
-                ? const Color(0xFFF3735E)
-                : const Color(0xFF7DD97B),
+        subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(
+            transactionModel.date,
+            style: Styles.styleRegular16(context).copyWith(
+              color: const Color(0xFFAAAAAA),
+            ),
+          ),
+        ),
+        trailing: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(
+            transactionModel.amount,
+            style: Styles.styleSemiBold20(context).copyWith(
+              color: transactionModel.isWithdrawal
+                  ? const Color(0xFFF3735E)
+                  : const Color(0xFF7DD97B),
+            ),
           ),
         ),
       ),

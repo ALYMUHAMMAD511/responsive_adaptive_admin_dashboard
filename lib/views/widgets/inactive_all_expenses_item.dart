@@ -16,8 +16,8 @@ class InactiveAllExpensesItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(
-        horizontal: 10,
-        vertical: 12,
+        horizontal: 8,
+        vertical: 8,
       ),
       decoration: ShapeDecoration(
         color: Colors.white,
