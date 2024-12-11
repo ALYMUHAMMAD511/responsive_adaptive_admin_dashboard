@@ -22,14 +22,21 @@ class IncomeChartDetailsItem extends StatelessWidget {
           color: incomeChartItemModel.color,
         ),
       ),
-      title: Text(
-        incomeChartItemModel.title,
-        style: Styles.styleRegular16(context),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Text(
+          incomeChartItemModel.title,
+          style: Styles.styleRegular16(context),
+        ),
       ),
-      trailing: Text(
-        incomeChartItemModel.percentage,
-        style: Styles.styleMedium16(context).copyWith(
-          color: const Color(0xFF208CC8),
+      trailing: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Text(
+          incomeChartItemModel.percentage,
+          style: Styles.styleMedium16(context).copyWith(
+            color: const Color(0xFF208CC8),
+          ),
         ),
       ),
     );
